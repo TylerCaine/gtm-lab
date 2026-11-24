@@ -1,0 +1,22 @@
+{
+ "error": false,
+ "free_enrichment": false,
+ "person": {
+  "person_id": "p-fake-data-2",
+  "first_name": "Robin",
+  "last_name": "Fox",
+  "full_name": "Robin Fox",
+  "email": {
+   "status": "VERIFIED",
+   "revealed": true,
+   "email": "robin.fox@dataloom.example",
+   "verification_method": "SMTP",
+   "email_mx_provider": "Google"
+  },
+  "mobile": {
+   "status": "UNAVAILABLE",
+   "revealed": false
+  }
+ },
+ "company": null
+}

@@ -1,0 +1,16 @@
+{
+ "data": {
+  "first_name": "Sam",
+  "last_name": "Poe",
+  "domain": "acme-analytics.example",
+  "email": "sam.poe@acme-analytics.example",
+  "score": 87,
+  "accept_all": true,
+  "position": "Director of Sales",
+  "verification": {
+   "date": null,
+   "status": null
+  },
+  "sources": []
+ }
+}

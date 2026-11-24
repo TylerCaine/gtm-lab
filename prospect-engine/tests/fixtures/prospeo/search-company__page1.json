@@ -1,0 +1,223 @@
+{
+ "error": false,
+ "free": false,
+ "results": [
+  {
+   "company": {
+    "company_id": "c-fake-001",
+    "name": "Acme Analytics",
+    "website": "https://www.acme-analytics.example",
+    "domain": "acme-analytics.example",
+    "type": "Private",
+    "industry": "Software Development",
+    "employee_count": 120,
+    "employee_range": "101-200",
+    "location": {
+     "country": "United States",
+     "country_code": "US",
+     "state": "California",
+     "city": "San Francisco"
+    },
+    "attributes": {
+     "is_b2b": true
+    },
+    "technology": {
+     "count": 2,
+     "technology_names": [
+      "HubSpot",
+      "Slack"
+     ],
+     "technology_list": [
+      {
+       "name": "HubSpot",
+       "category": "Other"
+      },
+      {
+       "name": "Slack",
+       "category": "Other"
+      }
+     ]
+    },
+    "funding": {
+     "count": 1,
+     "latest_funding_date": "2026-10-15T00:00:00Z",
+     "latest_funding_stage": "Series A",
+     "funding_events": [
+      {
+       "raised_at": "2026-10-15T00:00:00Z",
+       "stage": "Series A",
+       "link": "https://news.example/acme-analytics-series-a"
+      }
+     ]
+    },
+    "job_postings": {
+     "active_count": 3,
+     "active_titles": [
+      "Sales Development Representative",
+      "SDR",
+      "Account Executive"
+     ]
+    }
+   }
+  },
+  {
+   "company": {
+    "company_id": "c-fake-002",
+    "name": "Brightpipe",
+    "website": "https://www.brightpipe.example",
+    "domain": "brightpipe.example",
+    "type": "Private",
+    "industry": "Software Development",
+    "employee_count": 240,
+    "employee_range": "201-500",
+    "location": {
+     "country": "United States",
+     "country_code": "US",
+     "state": "New York",
+     "city": "New York"
+    },
+    "attributes": {
+     "is_b2b": true
+    },
+    "technology": {
+     "count": 1,
+     "technology_names": [
+      "Salesforce"
+     ],
+     "technology_list": [
+      {
+       "name": "Salesforce",
+       "category": "Other"
+      }
+     ]
+    },
+    "funding": null,
+    "job_postings": null
+   }
+  },
+  {
+   "company": {
+    "company_id": "c-fake-003",
+    "name": "CloudNest",
+    "website": "https://www.cloudnest.example",
+    "domain": "cloudnest.example",
+    "type": "Private",
+    "industry": "IT Services and IT Consulting",
+    "employee_count": 75,
+    "employee_range": "51-100",
+    "location": {
+     "country": "United States",
+     "country_code": "US",
+     "state": "Texas",
+     "city": "Austin"
+    },
+    "attributes": {
+     "is_b2b": null
+    },
+    "technology": null,
+    "funding": null,
+    "job_postings": null
+   }
+  },
+  {
+   "company": {
+    "company_id": "c-fake-004",
+    "name": "DataLoom",
+    "website": "https://www.dataloom.example",
+    "domain": "dataloom.example",
+    "type": "Private",
+    "industry": "Software Development",
+    "employee_count": 480,
+    "employee_range": "201-500",
+    "location": {
+     "country": "United States",
+     "country_code": "US",
+     "state": "Washington",
+     "city": "Seattle"
+    },
+    "attributes": {
+     "is_b2b": true
+    },
+    "technology": {
+     "count": 1,
+     "technology_names": [
+      "HubSpot"
+     ],
+     "technology_list": [
+      {
+       "name": "HubSpot",
+       "category": "Other"
+      }
+     ]
+    },
+    "funding": {
+     "count": 1,
+     "latest_funding_date": "2025-01-20T00:00:00Z",
+     "latest_funding_stage": "Seed",
+     "funding_events": [
+      {
+       "raised_at": "2025-01-20T00:00:00Z",
+       "stage": "Seed",
+       "link": "https://news.example/dataloom-seed"
+      }
+     ]
+    },
+    "job_postings": null
+   }
+  },
+  {
+   "company": {
+    "company_id": "c-fake-005",
+    "name": "Northwind Dev",
+    "website": "https://www.northwind-dev.example",
+    "domain": "northwind-dev.example",
+    "type": "Private",
+    "industry": "Software Development",
+    "employee_count": 650,
+    "employee_range": "501-1000",
+    "location": {
+     "country": "United States",
+     "country_code": "US",
+     "state": "Illinois",
+     "city": "Chicago"
+    },
+    "attributes": {
+     "is_b2b": true
+    },
+    "technology": null,
+    "funding": null,
+    "job_postings": null
+   }
+  },
+  {
+   "company": {
+    "company_id": "c-fake-006",
+    "name": "Maple SaaS",
+    "website": "https://www.maple-saas.example",
+    "domain": "maple-saas.example",
+    "type": "Private",
+    "industry": "Software Development",
+    "employee_count": 90,
+    "employee_range": "51-100",
+    "location": {
+     "country": "Canada",
+     "country_code": "CA",
+     "state": "Ontario",
+     "city": "Toronto"
+    },
+    "attributes": {
+     "is_b2b": true
+    },
+    "technology": null,
+    "funding": null,
+    "job_postings": null
+   }
+  }
+ ],
+ "pagination": {
+  "current_page": 1,
+  "per_page": 25,
+  "total_page": 1,
+  "total_count": 6
+ }
+}

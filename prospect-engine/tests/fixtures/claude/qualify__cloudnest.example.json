@@ -1,0 +1,23 @@
+{
+ "output": {
+  "business_model": "b2c",
+  "sells_to": "Consumers and families",
+  "icp_fit": "no",
+  "fit_reasons": [],
+  "disqualifiers": [
+   "Consumer app, not B2B SaaS"
+  ],
+  "evidence_urls": [
+   "https://cloudnest.example/"
+  ],
+  "funding_evidence": null,
+  "confidence": 0.9
+ },
+ "model": "claude-sonnet-5-5",
+ "usage": {
+  "input_tokens": 3000,
+  "output_tokens": 600,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0
+ }
+}

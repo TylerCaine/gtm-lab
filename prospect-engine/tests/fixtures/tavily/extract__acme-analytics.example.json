@@ -1,0 +1,20 @@
+{
+ "results": [
+  {
+   "url": "https://acme-analytics.example/",
+   "raw_content": "# Acme Analytics: product analytics for B2B revenue teams."
+  },
+  {
+   "url": "https://acme-analytics.example/pricing",
+   "raw_content": "# Pricing\nPlans: Team $499/month, Business $1,499/month, billed annually."
+  },
+  {
+   "url": "https://acme-analytics.example/careers",
+   "raw_content": "# Careers\nWe're hiring SDRs to grow our sales team."
+  }
+ ],
+ "failed_results": [],
+ "usage": {
+  "credits": 1
+ }
+}

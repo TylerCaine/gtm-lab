@@ -1,0 +1,39 @@
+{
+  "name": "us_b2b_saas_hiring_sdrs",
+  "description": "US B2B SaaS companies with 50 to 500 employees that are hiring Sales Development Representatives, use HubSpot, and raised funding in roughly the last 180 days.",
+  "hard_filters": {
+    "country": "US",
+    "employee_min": 50,
+    "employee_max": 500,
+    "business_model": "b2b_saas"
+  },
+  "soft_signals": {
+    "hiring_titles": [
+      "Sales Development Representative",
+      "SDR",
+      "Business Development Representative",
+      "BDR"
+    ],
+    "technologies": ["HubSpot"],
+    "funding_within_days": 180
+  },
+  "personas": [
+    {
+      "name": "economic_buyer",
+      "priority": 1,
+      "titles": ["Chief Revenue Officer", "CRO", "VP Sales", "VP of Sales", "Vice President of Sales", "VP Revenue", "VP of Revenue"],
+      "seniorities": ["c_suite", "vp"]
+    },
+    {
+      "name": "head_of_sales",
+      "priority": 2,
+      "titles": ["Head of Sales", "Director of Sales", "Sales Director"],
+      "seniorities": ["director", "head"]
+    }
+  ],
+  "exclusions": {
+    "domains": [],
+    "industries": ["staffing and recruiting"]
+  },
+  "target_accounts": 25
+}

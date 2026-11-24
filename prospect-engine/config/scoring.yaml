@@ -1,0 +1,43 @@
+# scoring.yaml: every weight used by src/score.py. Nothing is hard-coded.
+# total = fit_weight * fit_score + intent_weight * intent_score   (each 0-100)
+
+total:
+  fit_weight: 0.6
+  intent_weight: 0.4
+
+# Fit score: points per component, adding up to 100.
+# If a component is "unknown" it is left out and the remaining points are
+# rescaled to 100, so missing data never counts against a company.
+fit:
+  employee_range:
+    points: 20
+    in_range: 1.0              # inside employee_min..employee_max
+    near_range: 0.5            # within 20% outside the range
+    near_range_pct: 0.20
+    out_of_range: 0.0
+  business_model_match:
+    points: 20                 # 1.0 if the LLM's business_model matches the ICP
+  llm_icp_fit:
+    points: 40
+    # "no" is quoted: bare `no` in YAML means the boolean false, not the word.
+    values: {strong: 1.0, medium: 0.6, weak: 0.2, "no": 0.0}
+    exclude_on_no: true        # icp_fit = "no" -> account excluded regardless of score
+  tech_match:
+    points: 20
+    # D3: a match from job posts is medium confidence; no match = unknown (left out).
+    values: {match: 1.0}
+
+# Intent score: points per signal, adding up to 100.
+# Each signal decays by age: factor = 0.5 ** (age_days / half_life_days).
+intent:
+  hiring:
+    points: 70
+    half_life_days: 30
+    jobs_to_value: {1: 0.6, 2: 0.8, 3: 1.0}   # 3 or more matching jobs = full value
+  funding:
+    points: 30                 # least reliable signal, so weighted lightly
+    half_life_days: 30
+    multiply_by_confidence: true
+
+# Confidence labels -> numbers, used wherever a signal stores a label.
+confidence_values: {high: 0.9, medium: 0.6, low: 0.3}

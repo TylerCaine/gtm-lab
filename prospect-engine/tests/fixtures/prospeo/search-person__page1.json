@@ -1,0 +1,264 @@
+{
+ "error": false,
+ "free": false,
+ "results": [
+  {
+   "person": {
+    "person_id": "p-fake-acme-1",
+    "first_name": "Jane",
+    "last_name": "Doe",
+    "full_name": "Jane Doe",
+    "linkedin_url": null,
+    "current_job_title": "VP Sales",
+    "location": {
+     "country": "United States",
+     "country_code": "US",
+     "state": null,
+     "city": null
+    },
+    "job_history": [
+     {
+      "title": "VP Sales",
+      "company_name": "Acme Analytics",
+      "current": true,
+      "seniority": "Vice President",
+      "departments": [
+       "Sales"
+      ],
+      "company_id": "c-fake-001"
+     }
+    ],
+    "email": {
+     "status": "VERIFIED",
+     "revealed": false,
+     "email": null
+    },
+    "mobile": {
+     "status": "UNAVAILABLE",
+     "revealed": false
+    }
+   },
+   "company": {
+    "company_id": "c-fake-001",
+    "name": "Acme Analytics",
+    "domain": "acme-analytics.example"
+   }
+  },
+  {
+   "person": {
+    "person_id": "p-fake-acme-2",
+    "first_name": "Sam",
+    "last_name": "Poe",
+    "full_name": "Sam Poe",
+    "linkedin_url": null,
+    "current_job_title": "Director of Sales",
+    "location": {
+     "country": "United States",
+     "country_code": "US",
+     "state": null,
+     "city": null
+    },
+    "job_history": [
+     {
+      "title": "Director of Sales",
+      "company_name": "Acme Analytics",
+      "current": true,
+      "seniority": "Director",
+      "departments": [
+       "Sales"
+      ],
+      "company_id": "c-fake-001"
+     }
+    ],
+    "email": {
+     "status": "UNAVAILABLE",
+     "revealed": false,
+     "email": null
+    },
+    "mobile": {
+     "status": "UNAVAILABLE",
+     "revealed": false
+    }
+   },
+   "company": {
+    "company_id": "c-fake-001",
+    "name": "Acme Analytics",
+    "domain": "acme-analytics.example"
+   }
+  },
+  {
+   "person": {
+    "person_id": "p-fake-bright-1",
+    "first_name": "Alex",
+    "last_name": "Roe",
+    "full_name": "Alex Roe",
+    "linkedin_url": null,
+    "current_job_title": "Chief Revenue Officer",
+    "location": {
+     "country": "United States",
+     "country_code": "US",
+     "state": null,
+     "city": null
+    },
+    "job_history": [
+     {
+      "title": "Chief Revenue Officer",
+      "company_name": "Brightpipe",
+      "current": true,
+      "seniority": "C-Suite",
+      "departments": [
+       "Sales"
+      ],
+      "company_id": "c-fake-002"
+     }
+    ],
+    "email": {
+     "status": "VERIFIED",
+     "revealed": false,
+     "email": null
+    },
+    "mobile": {
+     "status": "UNAVAILABLE",
+     "revealed": false
+    }
+   },
+   "company": {
+    "company_id": "c-fake-002",
+    "name": "Brightpipe",
+    "domain": "brightpipe.example"
+   }
+  },
+  {
+   "person": {
+    "person_id": "p-fake-cloud-1",
+    "first_name": "Pat",
+    "last_name": "Lee",
+    "full_name": "Pat Lee",
+    "linkedin_url": null,
+    "current_job_title": "Head of Sales",
+    "location": {
+     "country": "United States",
+     "country_code": "US",
+     "state": null,
+     "city": null
+    },
+    "job_history": [
+     {
+      "title": "Head of Sales",
+      "company_name": "CloudNest",
+      "current": true,
+      "seniority": "Head",
+      "departments": [
+       "Sales"
+      ],
+      "company_id": "c-fake-003"
+     }
+    ],
+    "email": {
+     "status": "UNAVAILABLE",
+     "revealed": false,
+     "email": null
+    },
+    "mobile": {
+     "status": "UNAVAILABLE",
+     "revealed": false
+    }
+   },
+   "company": {
+    "company_id": "c-fake-003",
+    "name": "CloudNest",
+    "domain": "cloudnest.example"
+   }
+  },
+  {
+   "person": {
+    "person_id": "p-fake-data-1",
+    "first_name": "Chris",
+    "last_name": "Kim",
+    "full_name": "Chris Kim",
+    "linkedin_url": null,
+    "current_job_title": "VP Revenue",
+    "location": {
+     "country": "United States",
+     "country_code": "US",
+     "state": null,
+     "city": null
+    },
+    "job_history": [
+     {
+      "title": "VP Revenue",
+      "company_name": "DataLoom",
+      "current": true,
+      "seniority": "Vice President",
+      "departments": [
+       "Sales"
+      ],
+      "company_id": "c-fake-004"
+     }
+    ],
+    "email": {
+     "status": "VERIFIED",
+     "revealed": false,
+     "email": null
+    },
+    "mobile": {
+     "status": "UNAVAILABLE",
+     "revealed": false
+    }
+   },
+   "company": {
+    "company_id": "c-fake-004",
+    "name": "DataLoom",
+    "domain": "dataloom.example"
+   }
+  },
+  {
+   "person": {
+    "person_id": "p-fake-data-2",
+    "first_name": "Robin",
+    "last_name": "Fox",
+    "full_name": "Robin Fox",
+    "linkedin_url": null,
+    "current_job_title": "Sales Director",
+    "location": {
+     "country": "United States",
+     "country_code": "US",
+     "state": null,
+     "city": null
+    },
+    "job_history": [
+     {
+      "title": "Sales Director",
+      "company_name": "DataLoom",
+      "current": true,
+      "seniority": "Director",
+      "departments": [
+       "Sales"
+      ],
+      "company_id": "c-fake-004"
+     }
+    ],
+    "email": {
+     "status": "VERIFIED",
+     "revealed": false,
+     "email": null
+    },
+    "mobile": {
+     "status": "UNAVAILABLE",
+     "revealed": false
+    }
+   },
+   "company": {
+    "company_id": "c-fake-004",
+    "name": "DataLoom",
+    "domain": "dataloom.example"
+   }
+  }
+ ],
+ "pagination": {
+  "current_page": 1,
+  "per_page": 25,
+  "total_page": 1,
+  "total_count": 6
+ }
+}

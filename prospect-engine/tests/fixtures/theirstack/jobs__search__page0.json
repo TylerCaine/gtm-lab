@@ -1,0 +1,218 @@
+{
+ "metadata": {
+  "total_results": 9,
+  "truncated_results": 0
+ },
+ "data": [
+  {
+   "id": "ts-fake-1",
+   "job_title": "Sales Development Representative",
+   "url": "https://jobs.example/ts-fake-1",
+   "final_url": "https://careers.acme-analytics.example/jobs/ts-fake-1",
+   "source_url": null,
+   "date_posted": "2026-11-18",
+   "company_domain": "acme-analytics.example",
+   "technology_slugs": [],
+   "company_object": {
+    "name": "Acme Analytics",
+    "domain": "acme-analytics.example",
+    "employee_count": 118,
+    "country_code": "US",
+    "industry": "Software Development",
+    "is_recruiting_agency": false,
+    "technology_slugs": [
+     "hubspot",
+     "slack"
+    ],
+    "funding_stage": "series_a",
+    "last_funding_round_date": "2026-10-15",
+    "linkedin_url": null
+   }
+  },
+  {
+   "id": "ts-fake-2",
+   "job_title": "SDR (Remote)",
+   "url": "https://jobs.example/ts-fake-2",
+   "final_url": "https://careers.acme-analytics.example/jobs/ts-fake-2",
+   "source_url": null,
+   "date_posted": "2026-11-05",
+   "company_domain": "acme-analytics.example",
+   "technology_slugs": [],
+   "company_object": {
+    "name": "Acme Analytics",
+    "domain": "acme-analytics.example",
+    "employee_count": 118,
+    "country_code": "US",
+    "industry": "Software Development",
+    "is_recruiting_agency": false,
+    "technology_slugs": [
+     "hubspot",
+     "slack"
+    ],
+    "funding_stage": "series_a",
+    "last_funding_round_date": "2026-10-15",
+    "linkedin_url": null
+   }
+  },
+  {
+   "id": "ts-fake-3",
+   "job_title": "Business Development Representative",
+   "url": "https://jobs.example/ts-fake-3",
+   "final_url": "https://careers.brightpipe.example/jobs/ts-fake-3",
+   "source_url": null,
+   "date_posted": "2026-11-12",
+   "company_domain": "brightpipe.example",
+   "technology_slugs": [],
+   "company_object": {
+    "name": "Brightpipe",
+    "domain": "brightpipe.example",
+    "employee_count": 240,
+    "country_code": "US",
+    "industry": "Software Development",
+    "is_recruiting_agency": false,
+    "technology_slugs": [
+     "salesforce"
+    ],
+    "funding_stage": null,
+    "last_funding_round_date": null,
+    "linkedin_url": null
+   }
+  },
+  {
+   "id": "ts-fake-4",
+   "job_title": "SDR",
+   "url": "https://jobs.example/ts-fake-4",
+   "final_url": "https://careers.cloudnest.example/jobs/ts-fake-4",
+   "source_url": null,
+   "date_posted": "2026-10-30",
+   "company_domain": "cloudnest.example",
+   "technology_slugs": [],
+   "company_object": {
+    "name": "CloudNest",
+    "domain": "cloudnest.example",
+    "employee_count": 75,
+    "country_code": "US",
+    "industry": "Software Development",
+    "is_recruiting_agency": false,
+    "technology_slugs": [],
+    "funding_stage": null,
+    "last_funding_round_date": null,
+    "linkedin_url": null
+   }
+  },
+  {
+   "id": "ts-fake-5",
+   "job_title": "Sales Development Representative",
+   "url": "https://jobs.example/ts-fake-5",
+   "final_url": "https://careers.dataloom.example/jobs/ts-fake-5",
+   "source_url": null,
+   "date_posted": "2026-11-20",
+   "company_domain": "dataloom.example",
+   "technology_slugs": [],
+   "company_object": {
+    "name": "DataLoom",
+    "domain": "dataloom.example",
+    "employee_count": 470,
+    "country_code": "US",
+    "industry": "Software Development",
+    "is_recruiting_agency": false,
+    "technology_slugs": [
+     "hubspot"
+    ],
+    "funding_stage": "seed",
+    "last_funding_round_date": "2025-01-20",
+    "linkedin_url": null
+   }
+  },
+  {
+   "id": "ts-fake-6",
+   "job_title": "BDR",
+   "url": "https://jobs.example/ts-fake-6",
+   "final_url": "https://careers.dataloom.example/jobs/ts-fake-6",
+   "source_url": null,
+   "date_posted": "2026-11-02",
+   "company_domain": "dataloom.example",
+   "technology_slugs": [],
+   "company_object": {
+    "name": "DataLoom",
+    "domain": "dataloom.example",
+    "employee_count": 470,
+    "country_code": "US",
+    "industry": "Software Development",
+    "is_recruiting_agency": false,
+    "technology_slugs": [
+     "hubspot"
+    ],
+    "funding_stage": "seed",
+    "last_funding_round_date": "2025-01-20",
+    "linkedin_url": null
+   }
+  },
+  {
+   "id": "ts-fake-7",
+   "job_title": "SDR",
+   "url": "https://jobs.example/ts-fake-7",
+   "final_url": "https://careers.northwind-dev.example/jobs/ts-fake-7",
+   "source_url": null,
+   "date_posted": "2026-11-15",
+   "company_domain": "northwind-dev.example",
+   "technology_slugs": [],
+   "company_object": {
+    "name": "Northwind Dev",
+    "domain": "northwind-dev.example",
+    "employee_count": 640,
+    "country_code": "US",
+    "industry": "Software Development",
+    "is_recruiting_agency": false,
+    "technology_slugs": [],
+    "funding_stage": null,
+    "last_funding_round_date": null,
+    "linkedin_url": null
+   }
+  },
+  {
+   "id": "ts-fake-8",
+   "job_title": "BDR",
+   "url": "https://jobs.example/ts-fake-8",
+   "final_url": "https://careers.maple-saas.example/jobs/ts-fake-8",
+   "source_url": null,
+   "date_posted": "2026-11-10",
+   "company_domain": "maple-saas.example",
+   "technology_slugs": [],
+   "company_object": {
+    "name": "Maple SaaS",
+    "domain": "maple-saas.example",
+    "employee_count": 90,
+    "country_code": "US",
+    "industry": "Software Development",
+    "is_recruiting_agency": false,
+    "technology_slugs": [],
+    "funding_stage": null,
+    "last_funding_round_date": null,
+    "linkedin_url": null
+   }
+  },
+  {
+   "id": "ts-fake-9",
+   "job_title": "SDR for our client",
+   "url": "https://jobs.example/ts-fake-9",
+   "final_url": "https://careers.staffpro.example/jobs/ts-fake-9",
+   "source_url": null,
+   "date_posted": "2026-11-19",
+   "company_domain": "staffpro.example",
+   "technology_slugs": [],
+   "company_object": {
+    "name": "StaffPro Talent",
+    "domain": "staffpro.example",
+    "employee_count": 200,
+    "country_code": "US",
+    "industry": "Staffing and Recruiting",
+    "is_recruiting_agency": true,
+    "technology_slugs": [],
+    "funding_stage": null,
+    "last_funding_round_date": null,
+    "linkedin_url": null
+   }
+  }
+ ]
+}

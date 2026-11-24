@@ -1,0 +1,22 @@
+{
+ "error": false,
+ "free_enrichment": false,
+ "person": {
+  "person_id": "p-fake-data-1",
+  "first_name": "Chris",
+  "last_name": "Kim",
+  "full_name": "Chris Kim",
+  "email": {
+   "status": "VERIFIED",
+   "revealed": true,
+   "email": "chris.kim@dataloom.example",
+   "verification_method": "SMTP",
+   "email_mx_provider": "Google"
+  },
+  "mobile": {
+   "status": "UNAVAILABLE",
+   "revealed": false
+  }
+ },
+ "company": null
+}

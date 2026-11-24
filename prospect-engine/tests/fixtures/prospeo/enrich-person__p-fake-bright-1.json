@@ -1,0 +1,22 @@
+{
+ "error": false,
+ "free_enrichment": false,
+ "person": {
+  "person_id": "p-fake-bright-1",
+  "first_name": "Alex",
+  "last_name": "Roe",
+  "full_name": "Alex Roe",
+  "email": {
+   "status": "VERIFIED",
+   "revealed": true,
+   "email": "alex.roe@brightpipe.example",
+   "verification_method": "SMTP",
+   "email_mx_provider": "Google"
+  },
+  "mobile": {
+   "status": "UNAVAILABLE",
+   "revealed": false
+  }
+ },
+ "company": null
+}

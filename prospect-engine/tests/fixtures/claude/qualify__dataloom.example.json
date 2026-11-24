@@ -1,0 +1,29 @@
+{
+ "output": {
+  "business_model": "b2b_saas",
+  "sells_to": "Finance teams",
+  "icp_fit": "strong",
+  "fit_reasons": [
+   "Data integration platform sold to finance teams",
+   "Hiring SDRs and BDRs"
+  ],
+  "disqualifiers": [],
+  "evidence_urls": [
+   "https://dataloom.example/",
+   "https://dataloom.example/careers"
+  ],
+  "funding_evidence": {
+   "date": "2026-09-03",
+   "round": "Series B",
+   "url": "https://news.example/dataloom-series-b"
+  },
+  "confidence": 0.8
+ },
+ "model": "claude-sonnet-5-5",
+ "usage": {
+  "input_tokens": 3000,
+  "output_tokens": 600,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0
+ }
+}

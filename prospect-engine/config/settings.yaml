@@ -1,0 +1,151 @@
+# settings.yaml: runtime settings for Prospect Engine.
+# Numbers marked "verify" come from the 2026-11-24 research in BUILD_SPEC.md
+# and will be checked against live provider docs in build step 4.
+
+budget:
+  run_default_usd: 5.00        # used when --budget is not given
+  monthly_cap_usd: 25.00       # total logged spend allowed per calendar month
+
+paths:
+  db: data/prospects.db
+  mock_db: data/mock.db        # D5: --mock never touches the real database
+  logs_dir: data/logs
+  output_dir: output
+  suppression_file: data/suppression.csv            # D9: real list, gitignored
+  suppression_template: config/suppression.csv      # public, header only
+
+http:
+  timeout_seconds: 30
+  max_retries: 4               # retries on 429 and 5xx only
+  backoff_base_seconds: 2      # waits 2, 4, 8, 16 s (exponential)
+
+models:
+  qualify: claude-sonnet-5-5
+  icp: claude-sonnet-5-5
+  title_classifier: claude-haiku-5-5
+
+# Cache expiry (D6). Lookup order: providers.<name>.cache_days.<endpoint>,
+# then providers.<name>.cache_days.default, then cache_default_days.
+cache_default_days: 30
+
+# Per-provider plan, free-tier credit caps (D2) and cache expiry (D6).
+# plan: free -> dollar cost logged as $0, but monthly credits are capped.
+# plan: paid -> dollar cost logged at unit prices and counted against budgets.
+providers:
+  theirstack:
+    plan: free
+    monthly_credit_caps:       # verified 2026-11-24 (docs/PROVIDERS.md)
+      api: 200                 # job search: 1 credit per job returned
+    min_interval_seconds:
+      default: 6.5             # free plan: 10 requests/minute
+    cache_days:
+      default: 7               # job and signal data go stale quickly
+    technology_slugs:          # ICP technology name -> TheirStack slug
+      HubSpot: hubspot         # verified on theirstack.com/en/technology/hubspot
+    search:
+      page_size: 25            # free plan max per page
+      max_pages: 4             # free plan max is 5; 4 x 25 = 100 credits per run max
+
+  prospeo:                     # D10: replaces PDL. Verified 2026-11-24, see docs/PROVIDERS.md
+    plan: free
+    monthly_credit_caps:
+      default: 75              # UNVERIFIED (pricing page unreadable); real balance is read
+                               # from the free GET /account-information before live runs
+    min_interval_seconds:      # client-side throttle between calls
+      search-company: 1.1      # Starter: 1 search/second (free-plan limit not stated)
+      search-person: 1.1
+      enrich-person: 0.25      # Starter: 5/second
+      search-suggestions: 0.1  # 15/second, all plans
+      default: 1.1
+    cache_days:
+      search-suggestions: 30
+      default: 90              # firmographics, people and emails change slowly
+    search:
+      location: United States        # exact value from search-suggestions (type COUNTRY)
+      headcount_mode: custom         # "custom" = company_headcount_custom {min,max};
+                                     # "ranges" = company_headcount_range buckets
+      company_subtypes: [SaaS]       # company_type.subtypes (free plan)
+      company_industries: []         # optional company_industry include values
+      use_technology_filter: false   # company_technology needs the paid Starter plan
+      max_company_pages: 4           # 25 companies per page, 1 credit per page
+      max_person_per_company: 5
+      max_person_pages: 10           # 25 people per page, 1 credit per page
+    enrich:
+      only_verified_email: false
+      enrich_mobile: false           # never: 10 credits each + calling compliance
+
+  hunter:
+    plan: free
+    monthly_credit_caps:
+      default: 50              # UNVERIFIED free amount; finder 1 credit when found, verifier 0.5
+    min_interval_seconds:
+      default: 0.2             # docs: finder 15/s, verifier 10/s
+    cache_days:
+      default: 90
+
+  tavily:
+    plan: free
+    monthly_credit_caps:
+      default: 1000            # verified: free 1,000/month; basic search 1, extract 1 per 5 URLs
+    min_interval_seconds:
+      default: 0.7             # free plan: 100 requests/minute
+    cache_days:
+      search: 7                # funding-news searches
+      extract: 90              # page text
+      default: 7
+
+  firecrawl:                   # optional backup for page text (D1)
+    plan: free
+    enabled: false
+    monthly_credit_caps:
+      default: 1000            # verify: 1 credit per page
+    cache_days:
+      default: 90
+
+  claude:
+    plan: paid
+    unit_cost_usd_per_million_tokens:   # verified 2026-11-24 (docs/PROVIDERS.md)
+      claude-sonnet-5-5: {input: 2.00, output: 10.00}
+      claude-haiku-5-5: {input: 0.10, output: 0.50}
+    cache_days:
+      default: 90              # keyed on exact prompt + model
+    effort:                    # output_config.effort per task
+      qualify: medium
+      icp: medium
+      classify-titles: low
+    max_tokens:
+      qualify: 8000
+      icp: 8000
+      classify-titles: 4000
+    sonnet_refusal_fallback: true   # server-side fallback (beta) on Sonnet calls
+
+discover:
+  job_lookback_days: 30
+  max_jobs_per_run: 100        # keeps TheirStack API credits in check
+  candidate_multiplier: 2      # stop at target_accounts x 2 candidates
+
+qualify:
+  max_pages_per_company: 3
+  page_paths: ["/", "/pricing", "/careers"]
+  max_page_tokens: 6000        # total page text sent to Claude per company (~4 chars/token)
+  funding_window_days: 180
+  funding_search: if_missing   # "always" = one Tavily search per company (spec);
+                               # "if_missing" = skip when Prospeo/TheirStack already give a dated round
+
+estimate:                      # assumptions for `estimate` (Claude "typical" column)
+  qualify_typical_output_tokens: 2000   # thinking + JSON answer, normal case
+  classify_typical_output_tokens: 800
+  qualify_overhead_chars: 6000          # ICP, signals, funding snippets, URL list
+
+tiers:                         # minimum total score for each tier
+  A: 75
+  B: 55
+  C: 40                        # below C = excluded
+min_tier_for_contacts: B       # only A and B accounts get contacts bought
+
+contacts:
+  contacts_per_account: 3      # best matches kept per account (from up to
+                               # prospeo.search.max_person_per_company candidates)
+
+enrich:
+  phones_enabled: false        # off by default (cost + calling compliance)

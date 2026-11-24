@@ -1,0 +1,12 @@
+{
+ "output": {
+  "items": []
+ },
+ "model": "claude-haiku-5-5",
+ "usage": {
+  "input_tokens": 3000,
+  "output_tokens": 600,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0
+ }
+}

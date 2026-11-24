@@ -1,0 +1,25 @@
+{
+ "output": {
+  "business_model": "b2b_saas",
+  "sells_to": "Mid-market sales teams",
+  "icp_fit": "medium",
+  "fit_reasons": [
+   "Per-seat subscription software for sales teams"
+  ],
+  "disqualifiers": [
+   "Little detail on customers"
+  ],
+  "evidence_urls": [
+   "https://brightpipe.example/"
+  ],
+  "funding_evidence": null,
+  "confidence": 0.6
+ },
+ "model": "claude-sonnet-5-5",
+ "usage": {
+  "input_tokens": 3000,
+  "output_tokens": 600,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0
+ }
+}

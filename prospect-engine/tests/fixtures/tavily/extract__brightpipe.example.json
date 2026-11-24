@@ -1,0 +1,20 @@
+{
+ "results": [
+  {
+   "url": "https://brightpipe.example/",
+   "raw_content": "# Brightpipe: pipeline automation software for mid-market sales teams."
+  },
+  {
+   "url": "https://brightpipe.example/pricing",
+   "raw_content": "# Pricing\nPricing: per-seat subscription, contact sales."
+  },
+  {
+   "url": "https://brightpipe.example/careers",
+   "raw_content": "# Careers\nOpen roles: Business Development Representative."
+  }
+ ],
+ "failed_results": [],
+ "usage": {
+  "credits": 1
+ }
+}
